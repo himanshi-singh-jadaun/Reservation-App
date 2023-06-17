@@ -1,0 +1,144 @@
+  .register {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .registerContainer {
+    width: 510px;
+    height: 584px;
+    margin-top: 2px;
+    border-radius: 10px;
+    background-color: rgb(248, 241, 241);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel {
+  width: 510px; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+}
+
+.cancelIcon {
+  font-size: 20px;
+  color: green;
+  margin-right:5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.rTop {
+  width: 500px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0071c2;
+}
+
+.rBottom {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rbTop img {
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+
+.rbTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.imgContainer {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rbtInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.icon {
+  color:#0071c2;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.rbBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.rbbInput {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.Btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.registerBtn {
+   width: 250px;
+   border: none;
+   padding: 10px 20px;
+   background-color: #0071c2;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success {
+  font-weight: bold;
+  color: green;
+}
+
+.failure {
+  font-weight: bold;
+  color: red;
+}
