@@ -7,6 +7,11 @@ import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+const morgan = require ('morgan');
+const path = require ('path');
+const colors = require ('colors');
+
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -29,13 +34,25 @@ mongoose.connection.on("disconnected",()=> {
 app.use(cors()); // to connect to backend
 app.use(cookieParser());
 app.use(express.json());
+
+if(process.env.NODE_ENV==='development'){
+    app.use(morgan('dev'));
+}
+
 app.use("/auth",authRoute);
 app.use("/users",usersRoute);
 app.use("/hotels",hotelsRoute);
 app.use("/rooms",roomsRoute);
 
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('frontend/build'));
 
-app.listen(8800,() => {
+    app.get('*', (req,res)=> res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')));
+}
+
+
+
+app.listen(PORT,() => {
     connect();
-    console.log("connected to backend");
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold);
 });
