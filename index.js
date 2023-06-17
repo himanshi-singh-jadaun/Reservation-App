@@ -7,9 +7,9 @@ import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-const morgan = require ('morgan');
-const path = require ('path');
-const colors = require ('colors');
+import morgan from  "morgan";
+import path from "path";
+import colors from "colors";
 
 const PORT = process.env.PORT || 5000;
 
